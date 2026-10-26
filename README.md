@@ -1,75 +1,60 @@
 # Advisor Landing Template
 
-A reusable, single-page website starter for financial advisors, insurance agents, real estate agents, and small business owners. It uses Next.js App Router, TypeScript, Tailwind CSS, and a static export that works with Cloudflare Pages.
+An independent, static landing-page template for financial advisers, insurance agents, property professionals, local businesses, and independent professionals. The visual direction takes cues from the reference page's editorial typography, cream surfaces, deep red hero, portrait focus, clear navigation, and visible appointment action. All code and sample artwork here are independently maintained. No Carole photos, copy, logos, or production assets are included.
 
-## Start locally
+## Stack
 
-Requirements: Node.js 20.9 or later and npm.
+- Next.js App Router, TypeScript, Tailwind CSS 4
+- Static export to `out/` for Cloudflare Pages
+- No database, server routes, account system, paid package, or runtime image service
+- Inline SVG icons and local placeholder artwork
 
-```bash
-npm install
+## Run and build
+
+Use Node.js 22 and npm.
+
+```sh
+npm ci
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Make it yours
-
-Edit `src/config/site.ts` to update the client name, title, brand, colors, biography, services, testimonials, gallery images, booking link, contact details, social links, and footer note. The page sections read from this file so each client can get a separate repository with one content pass. Update `public/favicon.svg` if you change the monogram.
-
-Replace the sample photo URLs and `profileImageAlt` with client-approved images and accurate descriptions. You can use image files in `public/` with paths such as `/images/profile.jpg`. The template uses standard `<img>` elements so image delivery stays compatible with static export.
-
-The two testimonial entries are marked as sample content. Replace them with real, approved quotes or remove the entries before publishing. Review the general-information note in the footer for the client's industry and jurisdiction.
-
-Colors are set in `site.colors`. The layout adapts to those accent, ink, and paper values. Update the title and search description in `site.ts` to customize page metadata.
-
-## Build the static site
-
-```bash
+npm run lint
+npm run typecheck
 npm run build
 ```
 
-Next.js writes the static site to `out/`. This template does not use server actions, API routes, middleware, or runtime image optimization. Booking uses the external scheduling URL in the config. Contact links use `mailto:` and `tel:`.
+Open `http://localhost:3000`. The static build lands in `out/`.
 
-## Deploy to Cloudflare Pages
+## Customize a client site
 
-1. Create a new GitHub repository for the client and push this project to its `main` branch.
-2. In Cloudflare, open **Workers & Pages**, choose **Create application**, then **Pages** and **Import an existing Git repository**.
-3. Select the client repository.
-4. Choose **Next.js (Static HTML Export)** as the framework preset. Use build command `npm run build` and build directory `out`.
-5. Deploy. Later commits to the connected branch trigger a new Pages build.
+Edit `src/config/site.ts` for identity, biography, services, colors, theme, contact details, booking links, social links, SEO, privacy link, and section visibility. Add approved images under `public/images/` and point the config to those files. Follow `CLIENT_SETUP.md` and `TEMPLATE_CUSTOMIZATION.md` for the full handoff.
 
-Keep each client's repository and Cloudflare project separate. Do not put client secrets in this static site. Anything bundled into a static export is public.
+Available themes are `executive`, `minimal`, and `small-business`. Change `theme` in the config. Set `colors` to override selected theme colors. The testimonial section appears only when at least one item has `approved: true`. The gallery appears only when it has approved images.
 
-## Make a new client repository
+The initial profile is an example. It has no real client reviews or achievements. The sample privacy page is not ready for client launch until its data flows and retention details are confirmed.
 
-Create a new GitHub repository, copy this template into it, customize `src/config/site.ts`, replace sample images and quotes, review every external link, then build and deploy the new repository. This keeps each client's content and release history independent.
+## Separate client repositories
 
-## Project structure
+Set this master repository as a GitHub template. For each client, use GitHub's **Use this template** action to create a new repository. Each repository gets its own Git history, config, approved media, and Cloudflare project. Never put several client sites in one production repository.
+
+## Cloudflare Pages
+
+Use `npm run build` as the build command and `out` as the output directory. Read `CLOUDFLARE_DEPLOYMENT.md` before connecting a repository or domain. This build uses static Next.js export and does not need a Worker runtime.
+
+## Project map
 
 ```text
 src/
-  app/
-    globals.css     Design system and responsive layout
-    layout.tsx      SEO metadata and document shell
-    page.tsx        Reusable landing page sections
-  config/
-    site.ts         Client content, branding, links, and images
+  app/                 Page, metadata, robots, sitemap, privacy page
+  components/Sections.tsx
+  config/site.ts       Client content, theme, and section flags
+public/
+  favicon.svg
+  og-card.svg
+  images/profile-placeholder.svg
+CLIENT_SETUP.md
+TEMPLATE_CUSTOMIZATION.md
+CLOUDFLARE_DEPLOYMENT.md
 ```
-
-## Accessibility and customization
-
-- Semantic sections, headings, descriptive image alt text, and a skip link
-- Keyboard-visible focus styles and a native mobile disclosure menu
-- Responsive layouts and reduced-motion support
-- No paid packages, third-party icon libraries, or runtime services
-
-## Official setup references
-
-- [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports)
-- [Tailwind CSS with Next.js](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
-- [Cloudflare Pages static Next.js export](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/)
 
 ## License
 
-Add the license that fits your business before sharing or reselling client copies.
+Choose and add a license that matches your commercial use before creating client copies or distributing this template.

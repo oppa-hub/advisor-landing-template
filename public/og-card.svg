@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#40131f"/>
+  <circle cx="1015" cy="86" r="260" fill="#c7435d" opacity=".24"/>
+  <circle cx="1090" cy="575" r="190" fill="#f4a9b7" opacity=".15"/>
+  <text x="86" y="138" fill="#f4a9b7" font-family="Arial,sans-serif" font-size="20" letter-spacing="5">YOUR NAME ADVISORY</text>
+  <text x="82" y="316" fill="#fff8f4" font-family="Georgia,serif" font-size="72">Your Name</text>
+  <text x="86" y="385" fill="#f6dfe1" font-family="Arial,sans-serif" font-size="26">Financial Advisor</text>
+  <path d="M88 455h76" stroke="#f4a9b7" stroke-width="2"/>
+  <text x="87" y="505" fill="#f6dfe1" font-family="Arial,sans-serif" font-size="20">A thoughtful place to start.</text>
+</svg>

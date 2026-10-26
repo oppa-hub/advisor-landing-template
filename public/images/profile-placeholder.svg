@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait image placeholder</title>
+  <desc id="desc">Replace this abstract portrait with the client's approved profile photograph.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f2e5e0"/><stop offset="1" stop-color="#d8b8b2"/></linearGradient>
+    <linearGradient id="coat" x2="1"><stop stop-color="#521c2a"/><stop offset="1" stop-color="#7f3040"/></linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="618" cy="174" r="98" fill="#fff" opacity=".36"/>
+  <path d="M111 1000c35-211 110-329 289-329s257 118 289 329" fill="url(#coat)"/>
+  <path d="M283 440c0-157 62-254 117-254 69 0 124 96 124 254v70c0 114-49 190-124 190s-117-77-117-190z" fill="#bb806f"/>
+  <path d="M270 448c-34-174 24-330 139-330 127 0 190 145 143 334l-33-44-16-138c-40 60-109 83-203 77l-9 113z" fill="#2f2526"/>
+  <path d="M372 502c13 10 32 10 45 0" fill="none" stroke="#754a42" stroke-linecap="round" stroke-width="8"/>
+  <path d="M336 425h28m54 0h28" stroke="#382a28" stroke-linecap="round" stroke-width="9"/>
+  <path d="m315 674 85 122 89-122" fill="#fff" opacity=".92"/>
+  <path d="m400 796-59 204h125l-66-204" fill="#b7435b"/>
+  <text x="400" y="954" fill="#fff" font-family="Arial,sans-serif" font-size="22" letter-spacing="4" text-anchor="middle">APPROVED PHOTO</text>
+</svg>

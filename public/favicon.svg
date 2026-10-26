@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="32" fill="#173b32"/>
-  <text x="32" y="39" fill="#f7f5ef" font-family="Georgia,serif" font-size="20" text-anchor="middle">JL</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#40131f"/><path d="M16 47 29 16h7l13 31h-8l-2.8-7H26.5l-2.8 7H16Zm13-13h6l-3-8-3 8Z" fill="#fbf7f3"/></svg>
